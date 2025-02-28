@@ -41,8 +41,8 @@ class ProfileViewController: UIViewController {
     
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "Exit"), for: .normal)
-        button.tintColor = .red
+        let image = UIImage(named: "Exit")?.withRenderingMode(.alwaysOriginal)
+        button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .black
+        view.backgroundColor = .ypBlack
         
         view.addSubview(profileImageView)
         view.addSubview(nameLabel)

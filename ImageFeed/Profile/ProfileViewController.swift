@@ -2,6 +2,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    override func viewDidLoad() {
+            super.viewDidLoad()
+            setupUI()
+        }
+    
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 35 // Половина от 70x70
@@ -47,10 +52,7 @@ class ProfileViewController: UIViewController {
         return button
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
+    
     
     private func setupUI() {
         view.backgroundColor = .ypBlack
